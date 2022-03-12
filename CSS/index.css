@@ -1,0 +1,1067 @@
+@font-face {
+  font-family: Proxima-Nova-Regular;
+  src: url(./Fonts/Proxima-Nova-Regular.otf);
+}
+@font-face {
+  font-family: Proxima-Nova-Bold;
+  src: url(./Fonts/Proxima-Nova-Bold.otf);
+}
+@font-face {
+  font-family: Proxima-Nova-ExtraBold;
+  src: url(./Fonts/Proxima-Nova-Extrabold.otf);
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+  --hover-violet: #e26973;
+  --primary-violet: #f2858a;
+  --hover-color: #de7a7f;
+  --black-color: #595959;
+  --light-grey: #e8e8e8;
+
+  font-family: "Proxima-Nova-Regular", sans-serif;
+  position: relative;
+}
+/*-----------------------------------------------------------  START STRIP --------------------------------------------------*/
+.strip-bg {
+  background-color: var(--primary-violet);
+  display: flex;
+  align-items: center;
+}
+.strip {
+  display: flex;
+  width: 80%;
+  color: #ffffff;
+  margin: 0 auto;
+  padding: 1rem 0;
+  justify-content: space-between;
+  align-items: center;
+}
+.strip .strip-item .fas {
+  margin-right: 1rem;
+}
+@media (max-width: 768px) {
+  .strip {
+    width: 90%;
+  }
+  .strip .strip-item .fas {
+    margin-right: 0.5rem;
+  }
+}
+@media (max-width: 576px) {
+  .strip-bg {
+    display: none;
+    pointer-events: none;
+    opacity: 0;
+  }
+}
+/*-----------------------------------------------------------  END STRIP --------------------------------------------------*/
+
+/*-----------------------------------------------------------  START NAV --------------------------------------------------*/
+
+#logo {
+  width: 101px; /*196 - 95 = 131 */
+  height: 70px; /* 155 - 95 = 60; */
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+.navbar-brand {
+  flex: 1;
+}
+.collapse {
+  justify-content: flex-end;
+}
+.navbar-nav .nav-item {
+  margin-left: 5rem;
+}
+.show {
+    background-color: var(--primary-violet);
+}
+.show .navbar-nav .nav-item{
+    color: rgba(225, 225, 225, 0.7) !important;
+    font-size: 1.5rem;
+}
+.show .navbar-nav .nav-item:hover, .show .navbar-nav .nav-item:active, 
+.show .navbar-nav .nav-item:focus{
+    color: rgba(225, 225, 225, 1) !important;
+}
+
+
+/*-----------------------------------------------------------  END NAV --------------------------------------------------*/
+/*-----------------------------------------------------------  START HERO --------------------------------------------------*/
+
+.hero{
+    width: 100%;
+    height: 78vh;
+    background-image: url(./Images/New-hero-image.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+    color: var(--primary-violet);
+    overflow: hidden;
+}
+.hero-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 85%;
+    margin: auto;
+}
+.hero-content .welcome-text{
+    font-family: Proxima-Nova-Bold;
+    font-size: 3.5rem;
+    text-transform: uppercase;
+}
+.hero .subtext{
+    color: var(--black-color);
+    font-size: 1.5rem;
+    margin: 1rem 0rem 5rem 0rem;
+}
+.cta .left-btn, .cta .right-btn{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-radius: 25px;
+    font-family: inherit;
+    transition: 300ms ease;
+}
+.cta .left-btn a{
+    text-decoration: none;
+    color: #fff;
+}
+.cta .right-btn a{
+    text-decoration: none;
+    color: var(--primary-violet);
+}
+.cta .left-btn{
+    border: 2px solid var(--primary-violet);
+    background-color: var(--primary-violet);
+    padding: 0.7rem 2rem;
+}
+.cta .right-btn{
+    border: 2px solid var(--primary-violet);
+    margin-left: 2.5rem;
+    padding: 0.7rem 2rem;
+}
+.cta .left-btn:hover, .cta .left-btn:active{
+    border: 2px solid var(--hover-violet);
+    background-color: var(--hover-violet);
+    color: #ffffff;
+    outline: none;
+}
+.cta .right-btn:hover, .cta .right-btn:active{
+    background-color: var(--hover-violet);
+    border: 2px solid var(--hover-violet);
+    outline: none;
+}
+.cta .right-btn:hover > a, .cta .right-btn:active > a{
+    color: #ffffff;
+}
+@media screen and (max-width: 1024px) {
+    .strip {
+      width: 90%;
+    }
+    .strip .strip-item .fas {
+      margin-right: 0.5rem;
+    }
+    .hero-content{
+        height: 60%;
+        width: 90%;
+    }
+
+    .hero-content .welcome-text{
+        font-size: 2.7rem;
+        width: 100%;
+    }
+    .hero .subtext{
+        font-size: 1.5rem;
+        width: 100%;
+    }
+    .cta .left-btn{
+        border: 1px solid var(--primary-violet);
+        background-color: var(--primary-violet);
+        padding: 0.4rem 1rem;
+    }
+    .cta .right-btn{
+        border: 1px solid var(--primary-violet);
+        margin-left: 1rem;
+        padding: 0.4rem 1rem;
+    }
+
+  }
+  @media screen and (max-width: 576px) {
+    .strip-bg {
+      display: none;
+      pointer-events: none;
+      opacity: 0;
+    }
+    .hero{
+        height: 90vh;
+    }
+    .hero-content{
+        height: 60%;
+        width: 80%;
+    }
+    .hero-content .welcome-text{
+        font-size: 1.7rem;
+        width: 100%;
+    }
+    .hero-content .subtext{
+        font-size: 1.1rem;
+        width: 100%;
+    }
+    .cta{
+        display: none;
+        pointer-events: none;
+    }
+
+  }
+/*-----------------------------------------------------------  END HERO --------------------------------------------------*/
+
+/*-----------------------------------------------------------  START CARDS --------------------------------------------------*/
+
+.welcome-cards{
+    width: 75%;
+    margin: -50px auto 0px auto;
+    position: absolute;
+    left: 13%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(30px);
+    opacity: 0;
+    transition: 600ms ease;
+}
+.welcome-cards .card-left img, .welcome-cards .card-right img{
+    width: 15%;
+    margin-bottom: 3rem;
+}
+.welcome-cards .card-left h4, .welcome-cards .card-right h4{
+    font-family: Proxima-Nova-Bold;
+    margin-bottom: 1.5rem;
+    width: 80%;
+    font-size: 1.7rem;
+    text-align: center;
+}
+.welcome-cards .card-left p, .welcome-cards .card-right p{
+    margin-top: 1rem;
+    text-align: justify;
+    width: 90%;
+    font-size: 1.3rem;
+}
+.welcome-cards .card-left, .welcome-cards .card-right{
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    color: var(--primary-violet);
+    align-items: center;
+    justify-content: flex-start;
+    box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.5);
+    width: 90%;
+    margin: 0px 2rem;
+    padding: 2rem
+}
+@media screen and (max-width: 768px){
+    .welcome-cards{
+        margin: -80px auto 0px auto;
+        width: 90%;
+        position: absolute;
+        left: 5.5%;
+    }
+    .welcome-cards .card-left, .welcome-cards .card-right{
+        width: 100%;
+        margin: 0 1rem;
+        justify-content: flex-start;
+    }
+    .welcome-cards .card-left h4, .welcome-cards .card-right h4{
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+        text-align: center;
+    }
+    .welcome-cards .card-left p, .welcome-cards .card-right p{
+        font-size: 1rem;
+    }
+    .welcome-cards .card-left img, .welcome-cards .card-right img{
+        width: 20%;
+    }
+  }
+  @media (max-width: 576px) {
+    .welcome-cards{
+        flex-direction: column;
+        width: 80%;
+    }
+    .welcome-cards .card-left, .welcome-cards .card-right{
+        margin-bottom: 2rem;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    }
+  }
+/*-----------------------------------------------------------  END CARDS --------------------------------------------------*/
+
+hr{
+    margin: 30rem auto 5rem auto;
+    width: 60%;
+}
+.normal{
+    margin: 5rem auto 5rem auto;
+    width: 60%;
+}
+.normal2{
+    margin: 3rem auto 8rem auto;
+    width: 60%;
+}
+/*-----------------------------------------------------------  START SERVICES --------------------------------------------------*/
+
+.services{
+    width: 80%;
+    overflow: hidden;
+    margin:5rem auto;
+    position: relative;
+    opacity: 0;
+    transition: 600ms ease;
+}
+.services-contents .header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 5rem;
+    color: var(--primary-violet);
+    font-family: Proxima-Nova-Bold;
+    text-transform: uppercase;
+}
+.services-contents .header h2{
+    margin: 0rem 3rem;
+    font-size: 2.5rem;
+
+}
+.expand-more{
+    height: 0px;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+    position: relative;
+}
+.expand-more.expand-active{
+    height: auto;
+    transition: height 0.5s ease-in-out;
+}
+.read-more{
+    color: var(--primary-violet);
+    font-family: Proxima-Nova-Bold;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    opacity: .7;
+    transition: opacity 0.3s;
+}
+.read-more:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+.services-contents .row .service{
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    display: inline-block;
+    padding: 0.5em;
+    /* margin: 1rem; */
+}
+.services-contents .row .service img{
+    /* margin: 1rem; */
+    width: 100%;
+    display: block;
+}
+.services-contents .row .service img:hover{
+    cursor: pointer;
+}
+.services-contents .row .service .hover{
+    /* visibility: hidden; */
+    opacity: 0;
+    transform: scaleY(0);
+    position: absolute;
+    cursor: pointer;
+    padding: 2rem;
+    margin: 0.5rem;
+    top: 0rem;
+    left: 0rem;
+    bottom: 0rem;
+    height: 95%;
+    background-color: rgba(226, 105, 115, .8);
+} 
+.services-contents .row .service .hover .hover-text{
+    color: #ffffff;
+    font-family: Proxima-Nova-Bold;
+    margin-bottom: 2rem;
+    opacity: 1;
+    z-index: 1000;
+}
+.services-contents .row .service .hover .long{
+    font-size: 1.4rem;
+    margin-bottom: 2.1rem;
+}
+.services-contents .row .service .hover .short{
+    margin-top: 3.8rem;
+}
+.services-contents .row .service .hover .hover-cta{
+    color: var(--primary-violet);
+    background: transparent;
+    border: none;
+    border-radius: 20px;
+    padding: 0.5rem 1rem;
+    background-color: #ffffff;
+    opacity: 1 !important;
+    margin-bottom: .8rem;
+    translate: 300ms ease;
+}
+.services-contents .row .service .hover .hover-cta:hover{
+    background-color: var(--hover-violet);
+    color: #ffffff;
+    translate: 300ms ease;
+}
+.services-contents .row .service:hover .hover{
+    /* visibility: visible; */
+    opacity: 1;
+    transform: scaleY(1);
+    transition: .5s ease;
+}
+
+/* #more-content{
+    visibility: hidden;
+    pointer-events: none;
+} */
+/*-----------------------------------------------------------  END SERVICES --------------------------------------------------*/
+/*-----------------------------------------------------------  START ABOUT  --------------------------------------------------*/
+
+.about-us{
+    width: 80%;
+    margin: auto;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+    padding: 2rem;
+}
+.about-us .about-us-contents{
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: var(--primary-violet);
+}
+.about-us .about-us-contents img{
+    width: 100%;
+}
+.read-more-about-us{
+    height: 0px;
+    display: flex;
+    justify-content:space-between;
+    align-items: flex-start;
+    text-align: justify;
+    font-size: 1.2rem;
+    color: var(--primary-violet);
+    transition: height 0.5s ease-in-out;
+}
+.read-more-holder {
+    display: flex;
+    width: 80%;
+    margin-left: 2rem;
+}
+.expand-more.expand-active{
+    height: auto;
+    transition: height 0.5s ease-in-out;
+}
+.read-more-about-us img{
+    width: 50%;
+    margin: 0;
+}
+.read-more-about-us p{
+    padding: 1rem 2rem;
+}
+.about-text1{
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 600ms ease;
+}
+
+
+/*-----------------------------------------------------------  END ABOUT --------------------------------------------------*/
+/*-----------------------------------------------------------  START WHY CHOOSE US --------------------------------------------------*/
+
+.why-choose-us {
+    width: 100%;
+    height: auto;
+    background-image: url(/Images/pexels-craig-adderley-1.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: #ffffff;
+}
+.why-choose-us::after{
+    content: "";
+    background-color: rgba(226, 105, 115, .8);
+    mix-blend-mode: multiply ;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.why-choose-us .heading{
+    z-index: 3;
+    background-color: #ffffff;
+    width: 40%;
+    padding: 1rem;
+    border-radius: 40px;
+    font-family: Proxima-Nova-Bold;
+    text-transform: uppercase;
+    font-size: 2.3rem;
+    color: var(--primary-violet);
+    margin: -2.5% auto 5rem auto;
+    text-align: center;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1)
+}
+.why-choose-us .choose-text{
+    z-index: 5;
+    width: 90%;
+    margin: 1rem auto 1.5rem auto;
+}
+.why-choose-us .choose-text strong{
+    font-size: 1.1rem;
+    text-decoration: underline;
+}
+.why-choose-us{
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 600ms ease;
+}
+
+
+/*-----------------------------------------------------------  END WHY CHOOSE US --------------------------------------------------*/
+/*-----------------------------------------------------------  START CONTACT US --------------------------------------------------*/
+
+.contact-us{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    color: var(--primary-violet);
+}
+.contact-form{
+    display: flex;
+    flex-direction: column;
+    opacity: 0;
+    transform: translateX(30px);
+    transition: 600ms ease;
+}
+.contact-info{
+    opacity: 0;
+    transform: translateX(-30px);
+    transition: 600ms ease;
+}
+.contact-form form{
+    display: flex;
+    flex-direction: column;
+}
+.contact-us .contact-info h3, .form-header{
+    font-family: Proxima-Nova-Bold;
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+}
+.contact-us .contact-info p{
+    font-size: 1.2rem;
+}
+.social-icons{
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.social-icons a{
+    text-decoration: none;
+    color: var(--primary-violet);
+}
+.social-icons i{
+    font-size: 1.5rem;
+    padding: 1rem;
+    transition: 300ms ease;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icons i:hover{
+    color:#ffffff;
+    background-color: var(--primary-violet);
+    padding: 1rem;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.form-header{
+    margin-bottom: 0px;
+    text-align:center;
+}
+.form-subtext{
+    text-align: center;
+}
+form input, form select{
+    border: none;
+    outline: none;
+    margin: 1rem;
+    border: 2px solid var(--primary-violet);
+    background-color: transparent;
+    padding: 0.5rem 0.8rem;
+    border-radius: 25px;
+}
+
+form input::placeholder{
+    color: var(--primary-violet);
+}
+form input[type="submit"]{
+    width: 25%;
+    align-self: flex-end;
+    background-color: transparent;
+    color: var(--primary-violet);
+    transition: 300ms ease;
+}
+form input[type="submit"]:hover{
+    background-color: var(--primary-violet);
+    color: #ffffff;
+}
+
+
+
+/*-----------------------------------------------------------  END CONTACT US --------------------------------------------------*/
+/*-----------------------------------------------------------  START FOOTER --------------------------------------------------*/
+
+.footer{
+    width: 100%;
+    background-color: var(--black-color);
+    color: rgba(225, 225, 225, 0.7);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1.5rem 0rem .5rem 0rem;
+    margin-top: 2rem;
+}
+.footer .copyrights{
+    font-size: 1.2rem;
+    font-family: Proxima-Nova-Bold;
+}
+.footer .designer{
+    font-family: Proxima-Nova-Regular;
+    font-size: 1rem;
+}
+
+/*-----------------------------------------------------------  END FOOTER --------------------------------------------------*/
+
+@media screen and (max-width: 1024px) {
+    hr{
+        margin-top: 30rem;
+    }
+    .welcome-cards{
+        width: 95%;
+        margin: -6rem ;
+        align-self: center;
+    }
+    .welcome-cards .card-left, .welcome-cards .card-right{
+        margin-bottom: 2rem;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    }
+    .services-contents .row .service .hover{
+        opacity: 1;
+        width: 95%;
+    }
+    .services-contents .row .service .hover .hover-text{
+        font-size: 1.3rem;
+        font-family: Proxima-Nova-Regular;
+    }
+    .services-contents .row .service .hover .long{
+        font-size: 1rem;
+        margin-bottom: 1.1rem;
+    }
+    .services-contents .row .service .hover .short{
+        margin-top: 3rem; 
+    }
+    .services-contents .row .service .hover .hover-cta{
+        padding: 0.25rem 0.5rem;
+        font-size: .8rem;
+    }
+    .about-us{
+        width: 80%;
+    }
+    .about-us .about-us-contents, .read-more-about-us{
+        flex-direction: column;
+        font-size: 1.5rem;
+    }
+    .read-more-about-us{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-about-us img{
+        padding: 0px;
+        width: 100%;
+    }
+    .about-us .about-us-contents img{
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-holder {
+        margin-left: 0%;
+    }
+    .read-more-holder span {
+        font-size: 1.5rem;
+    }
+    .read-more-about-us p{
+        padding: 0rem;
+    }
+    .why-choose-us .heading{
+        width: 65%;
+        font-size: 2rem;
+        margin-top: -3%;
+    }
+    .why-choose-us .choose-text{
+        z-index: 5;
+        width: 90%;
+        font-size: 1.6rem;
+        margin: 0rem auto 1rem auto;
+    }
+    .why-choose-us .choose-text strong{
+        font-size: 1.4rem;
+        text-decoration: underline;
+    }
+    .contact-us{
+        width: 100%;
+        flex-direction: column;
+        color: var(--primary-violet);
+    }
+    .contact-us .contact-info p{
+        font-size: 1.5rem;
+    }
+    .contact-us .contact-info h3{
+        font-size: 2.5rem;
+    }
+    .contact-us .contact-info {
+        margin-bottom: 4rem;
+        padding: 3rem;
+        width: 100%;
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        text-align: center;
+    }
+    .social-icons{
+        width: 60%;
+        margin: 3rem auto 0rem auto;
+    }
+    .social-icons i{
+        color:#ffffff;
+    }
+    .social-icons i:focus, .social-icons i:active,
+    .social-icons i:hover{
+        color:var(--primary-violet);
+        background-color: #ffffff;
+    }
+    form input[type="submit"]:hover, form input[type="submit"]:active, 
+    form input[type="submit"]:focus{
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        outline: none;
+    }
+    .footer .copyrights{
+        font-size: 1.4rem;
+    }
+    .footer .designer{
+        font-size: 1.1rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    hr{
+        margin-top: 30rem;
+    }
+    .welcome-cards{
+        width: 100%;
+        margin: -6rem 0px 0px -2.5rem;
+    }
+    .welcome-cards .card-left, .welcome-cards .card-right{
+        margin-bottom: 2rem;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.3);
+    }
+    .services-contents .header h2{
+        margin: 0rem 3rem;
+        font-size: 2rem;
+    }
+    .services-contents .row .service .hover{
+        opacity: 1;
+        width: 95%;
+    } 
+    .services-contents .row .service .hover .hover-text{
+        font-size: 1.4rem;
+        font-family: Proxima-Nova-Regular;
+    }
+    .services-contents .row .service .hover .long{
+        font-size: 1.2rem;
+        margin-bottom: 1.1rem;
+    }
+    .services-contents .row .service .hover .short{
+        margin-top: 3.8rem; 
+    }
+    .about-us{
+        width: 90%;
+    }
+    .about-us .about-us-contents, .read-more-about-us{
+        flex-direction: column;
+        font-size: 1.3rem;
+    }
+    .read-more-about-us{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-about-us img{
+        padding: 0px;
+        width: 80%;
+    }
+    .read-more-holder span {
+        font-size: 1.2rem;
+    }
+    .about-us .about-us-contents img{
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-holder {
+        margin-left: 0%;
+    }
+    .read-more-about-us p{
+        padding: 0rem;
+    }
+    .why-choose-us .heading{
+        width: 65%;
+        font-size: 1.2rem;
+        margin-top: -4%;
+    }
+    .why-choose-us .choose-text{
+        z-index: 5;
+        width: 90%;
+        font-size: 1.3rem;
+        margin: 0rem auto 1.5rem auto;
+    }
+    .why-choose-us .choose-text strong{
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+    .contact-us{
+        width: 100%;
+        flex-direction: column;
+        color: var(--primary-violet);
+    }
+    .contact-us .contact-info {
+        margin-bottom: 4rem;
+        padding: 3rem;
+        width: 100%;
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        text-align: center;
+    }
+    .contact-us .contact-info p{
+        font-size: 1rem;
+    }
+    .social-icons{
+        width: 70%;
+        margin: 2rem auto 1rem auto;
+    }
+    .social-icons i{
+        color:#ffffff;
+        font-size: 1.2rem;
+    }
+    .social-icons i:focus, .social-icons i:active,
+    .social-icons i:hover{
+        color:var(--primary-violet);
+        background-color: #ffffff;
+    }
+    .name-email input{
+        width: 92%;
+    }
+    .contact-us form{
+        padding: 0rem 1.3rem;
+    }
+    form input[type="submit"]:hover, form input[type="submit"]:active, 
+    form input[type="submit"]:focus{
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        outline: none;
+    }
+    .footer .copyrights{
+        font-size: 1rem;
+    }
+    .footer .designer{
+        font-size: .8rem;
+    }
+  }
+  @media screen and (max-width: 576px) {
+      hr{
+        margin-top: 52rem;
+      }
+      .welcome-cards{
+        width: 80%;
+        margin: -6rem auto;
+    }
+    .services-contents .header .deco{
+        width: 20%;
+    }
+
+    .services-contents .header{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 4rem;
+        color: var(--primary-violet);
+        font-family: Proxima-Nova-Bold;
+        text-transform: uppercase;
+    }
+    .services-contents .header h2{
+        margin: 0rem 0.5rem;
+        font-size: 1.6rem;
+        text-align: center;
+    }
+    
+    .services-contents .row .service .hover{
+        opacity: 1;
+        width: 95%;
+    } 
+    .services-contents .row .service .hover .hover-text{
+        font-size: 1.4rem;
+        font-family: Proxima-Nova-Regular;
+    }
+    .services-contents .row .service .hover .long{
+        font-size: 1.2rem;
+        margin-bottom: 1.1rem;
+    }
+    .services-contents .row .service .hover .short{
+        margin-top: 3.8rem; 
+    }
+    .services-contents .row .service .hover .hover-cta,
+    .services-contents .row .service .hover .hover-cta:focus,
+    .services-contents .row .service .hover .hover-cta:active{
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        font-size: .8rem;
+        outline: none;
+    }
+    .about-us{
+        width: 100%;
+    }
+    .about-us .about-us-contents, .read-more-about-us{
+        flex-direction: column;
+        font-size: 1rem;
+    }
+    .read-more-about-us{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-about-us img{
+        padding: 0px;
+        width: 100%;
+    }
+    .about-us .about-us-contents img{
+        width: 100%;
+        padding: 0px;
+    }
+    .read-more-holder {
+        margin-left: 0%;
+    }
+    .read-more-holder span {
+        font-size: 0.9rem;
+    }
+    .read-more-about-us p{
+        padding: 0rem;
+    }
+    .why-choose-us .heading{
+        width: 65%;
+        font-size: 1rem;
+        margin-top: -6%;
+    }
+    .why-choose-us .choose-text{
+        z-index: 5;
+        width: 90%;
+        font-size: .9rem;
+        margin: 0rem auto 1.5rem auto;
+    }
+    .why-choose-us .choose-text strong{
+        font-size: 1rem;
+        text-decoration: underline;
+    }
+    .contact-us{
+        width: 100%;
+        flex-direction: column;
+        color: var(--primary-violet);
+    }
+    .contact-us .contact-info {
+        margin-bottom: 4rem;
+        padding: 3rem;
+        width: 100%;
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        text-align: center;
+    }
+    .social-icons i{
+        color:#ffffff;
+    }
+    .social-icons i:focus, .social-icons i:active,
+    .social-icons i:hover{
+        color:var(--primary-violet);
+        background-color: #ffffff;
+    }
+    .name-email input{
+        width: 92%;
+    }
+    .contact-us form{
+        padding: 0rem 1.3rem;
+    }
+    form input[type="submit"]:hover, form input[type="submit"]:active, 
+    form input[type="submit"]:focus{
+        background-color: var(--primary-violet);
+        color: #ffffff;
+        outline: none;
+    }
+    .footer .copyrights{
+        font-size: 1rem;
+    }
+    .footer .designer{
+        font-size: .8rem;
+    }
+
+
+}
+/* ----------------------------------------------- Animatiion Classes ---------------------------------------------------- */
+
+.horizontal-slide{
+    opacity: 1;
+    transform: translateX(0);
+}
+.vertical-slide{
+    opacity: 1;
+    transform: translateY(0);
+}
+.fade-appear{
+    opacity: 1;
+}
+
