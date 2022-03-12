@@ -1,14 +1,14 @@
 @font-face {
   font-family: Proxima-Nova-Regular;
-  src: url(./Fonts/Proxima-Nova-Regular.otf);
+  src: url(/Fonts/Proxima-Nova-Regular.otf);
 }
 @font-face {
   font-family: Proxima-Nova-Bold;
-  src: url(./Fonts/Proxima-Nova-Bold.otf);
+  src: url(/Fonts/Proxima-Nova-Bold.otf);
 }
 @font-face {
   font-family: Proxima-Nova-ExtraBold;
-  src: url(./Fonts/Proxima-Nova-Extrabold.otf);
+  src: url(/Fonts/Proxima-Nova-Extrabold.otf);
 }
 html{
     scroll-behavior: smooth;
@@ -95,7 +95,7 @@ body {
 .hero{
     width: 100%;
     height: 78vh;
-    background-image: url(./Images/New-hero-image.jpg);
+    background-image: url(/Images/New-hero-image.jpg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
